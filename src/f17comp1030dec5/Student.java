@@ -56,6 +56,6 @@ public class Student {
     @Override
     public String toString()
     {
-        return "name: " + name + " student number: " + studentNumber;
+        return String.format("name: %s student number: %d", name, studentNumber); 
     }
 }
