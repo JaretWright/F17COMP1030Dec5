@@ -21,6 +21,17 @@ public class StringExperiments {
         }
         
         //check if the first letter is a capital
+        System.out.printf("The first character %s a capital%n",
+                                    firstLetterIsCapital(word)?"is":"is not");
+        
+        if (!firstLetterIsCapital(word))
+        {
+            char firstLetter = Character.toUpperCase(word.charAt(0));
+            String restOfWord = word.substring(1);
+            word=Character.toString(firstLetter) + restOfWord;
+        }
+        System.out.printf("The word is now: %s%n", word);
+            
        
     }
     
@@ -30,7 +41,7 @@ public class StringExperiments {
      * @param word
      * @return true if the first character is upper case, false otherwise
      */
-     public static boolean firstLetterIsCaptial(String word)
+     public static boolean firstLetterIsCapital(String word)
     {
         //ASCII characters in the range 65-90 are UPPER case
         if (word.charAt(0) >= 65 && word.charAt(0)<=90)
