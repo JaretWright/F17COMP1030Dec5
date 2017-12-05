@@ -53,4 +53,9 @@ public class Student {
         grades[courseNum-1] = grade;
     }
     
+    @Override
+    public String toString()
+    {
+        return "name: " + name + " student number: " + studentNumber;
+    }
 }
